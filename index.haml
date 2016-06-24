@@ -5,6 +5,8 @@
 		%title La mejor comida en Restaurant Facilito
 		%meta{name: "description", content: "como rico en el mejor restaurante de la ciudad, servicio de primera, los mejores tacos de la ciudad."}/
 		%link{rel: "stylesheet", href: "css/normalize.css"}
+		%link{rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.0/flexboxgrid.min.css"}
+		%link{rel: "stylesheet", href: "css/style.css"}
 		%meta{name: "viewport", content: "width=device-width, initial-scale=1"}/
 		%script{src: "js/vendor/modernizr-2.8.3.min.js"}
 	%body
@@ -17,4 +19,7 @@
 				actualiza tu navegador
 			para una mejor experiencia
 		="<![endif]-->"
-
+		.video-container
+			%video{autoplay: true, loop: true, width: 1280, height: 720}
+				%source{src: "videos/mp4/bbq.mp4"}/
+				%source{src: "videos/webm/bbq.webm"}/
