@@ -5,7 +5,9 @@
 		%title La mejor comida en Restaurant Facilito
 		%meta{name: "description", content: "como rico en el mejor restaurante de la ciudad, servicio de primera, los mejores tacos de la ciudad."}/
 		%link{rel: "stylesheet", href: "css/normalize.css"}
+		%link{rel: "stylesheet", href: "css/bootstrap.css"}
 		%link{rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.0/flexboxgrid.min.css"}
+		%link{href:"https://fonts.googleapis.com/css?family=Dancing+Script:400,700", rel:"stylesheet"}
 		%link{rel: "stylesheet", href: "css/style.css"}
 		%meta{name: "viewport", content: "width=device-width, initial-scale=1"}/
 		%script{src: "js/vendor/modernizr-2.8.3.min.js"}
@@ -20,6 +22,20 @@
 			para una mejor experiencia
 		="<![endif]-->"
 		.video-container
-			%video{autoplay: true, loop: true, width: 1280, height: 720}
+			%video{autoplay: true, loop: true, width: 1280, height: 720, poster: "/videos/images/bbq.jpg"}
 				%source{src: "videos/mp4/bbq.mp4"}/
 				%source{src: "videos/webm/bbq.webm"}/
+		.row.full-height.middle-xs.center-xs
+			.col-xs-12.sobre
+				.box
+					%img{src: "/imgs/logo.png", width: 200}
+					%h1.white-text.dancing-text.white-text.title.no-margin Restaurante Facilito
+					%p#is-open.white-text Abierto ahora
+			%nav.fixed.top.right.white-text.navigation#navigation
+				-menu = ["Inicio", "Menu", "Galeria", "Contacto", "Cómo llegar"]
+				%ul.list-inline
+					-menu.each do |item|
+						%li
+							%a{:href => "#"}= item
+
+
